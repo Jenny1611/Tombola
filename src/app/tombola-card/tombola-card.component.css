@@ -9,7 +9,7 @@
     width: fit-content;
     border: 1px solid #999;
     border-radius: 1.2vw;
-    margin: 60px 0;
+    margin: 100px 0 0 0;
 }
 
 .cell:nth-child(1) div,
