@@ -113,11 +113,12 @@ button {
 }
 
 button p {
-    font-size: 50%;
+    font-size: 12px;
 }
 
 button img {
-    width: 16%;
+    width: 32px;
+    margin: 0 0 0 10px;
 }
 
 button:active {
@@ -128,5 +129,13 @@ button:active {
     #rotateDeviceWarning {
         display: block;
         text-align: center;
+    }
+
+    button p {
+        font-size: 8px;
+    }
+
+    button img {
+        width: 20px;
     }
 }
