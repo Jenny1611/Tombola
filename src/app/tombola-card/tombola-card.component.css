@@ -1,0 +1,132 @@
+#rotateDeviceWarning {
+    display: none;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 10.5vw 10.5vw 10.5vw 10.5vw 10.5vw 10.5vw 10.5vw 10.5vw 10.5vw;
+    grid-template-rows: 10.5vw 10.5vw 10.5vw;
+    width: fit-content;
+    border: 1px solid #999;
+    border-radius: 1.2vw;
+}
+
+.cell:nth-child(1) div,
+.cell:nth-child(1) div img {
+    border-radius: 1.2vw 0 0 0;
+}
+
+.cell:nth-child(9) div,
+.cell:nth-child(9) div img {
+    border-radius: 0 1.2vw 0 0;
+}
+
+.cell:nth-child(19) div,
+.cell:nth-child(19) div img {
+    border-radius: 0 0 0 1.2vw;
+}
+
+.cell:nth-child(27) div,
+.cell:nth-child(27) div img {
+    border-radius: 0 0 1.2vw 0;
+}
+
+.cell div {
+    width: 10.5vw;
+    height: 10.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    border: 1px solid #999;
+    color: black;
+    cursor: pointer;
+}
+
+.cell div.none {
+    background-color: #666;
+    cursor: default;
+}
+
+.cell div span {
+    margin: 5px;
+    background-color: #000;
+    color: #fff;
+    padding: 2px 4px;
+    font-size: 1vw;
+    border-radius: 3px;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.cellWithImage {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adatta l'immagine alla cella */
+    filter: brightness(80%); /* Oscura solo l'immagine */
+    z-index: 1; /* Posiziona l'immagine sotto il contenuto */
+}
+
+.cellWithImage p.number {
+    background-color: #000;
+    color: #fff;
+    width: 35%;
+    height: 35%;
+    border-radius: 100%;
+    text-align: center;
+    margin: 3px 0 0 3px;
+    z-index: 2;
+}
+
+.cellWithImage img.cross {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+button {
+    margin: 30px;
+    border-radius: 10px;
+    background-color: #777;
+    outline: none;
+    border: 1px solid white;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 12px 0 #ddd;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button p {
+    font-size: 50%;
+}
+
+button img {
+    width: 16%;
+}
+
+button:active {
+    background-color: #666;
+}
+
+@media screen and (width < 650px) {
+    #rotateDeviceWarning {
+        display: block;
+        text-align: center;
+    }
+}

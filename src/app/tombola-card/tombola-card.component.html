@@ -1,0 +1,18 @@
+<h3 id="rotateDeviceWarning">Ruota il dispositivo per una migliore esperienza!</h3>
+
+<div class="card">
+    <div class="cell" *ngFor="let cell of cardWithFaces">
+        <div *ngIf="cell !== 0" class="cellWithImage" (click)="handleClick(cell.number)">
+            <img class="backgroundImage" [src]="cell.url" alt="background">
+            <p class="number">{{cell.number}}</p>
+            <img class="cross" *ngIf="cell.checked" src="../../assets/cross.svg" alt="checked">
+            <span>{{cell.face}}</span>
+        </div>
+        <div *ngIf="cell === 0" class="none"></div>
+    </div>
+</div>
+
+<button (click)="generateNewCard()">
+    <p>Non mi piace questa tessera</p>
+    <img src="../../assets/dislike.svg" alt="dislike">
+</button>
